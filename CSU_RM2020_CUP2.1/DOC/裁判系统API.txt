@@ -1,0 +1,20 @@
+/**
+  * @brief  裁判系统用户数据发送.
+  * @param  data1,data2,data3 客户端显示的三个浮点数.
+  * @note   用户调用,非ISR调用环境均可.
+  * @retval NULL.
+  */
+	/**
+  * @brief  自定义数据发送
+  * @param  comment_ID:数据的内容ID(固定0xD180)；
+	          sender_ID：发送者机器人的ID（1，红英雄；2，红工程；3/4/5，红步兵；6，红空中；7，红哨兵
+						                             11，蓝英雄；12，蓝工程；13/14/15,蓝步兵；16，蓝空中；17，蓝哨兵）
+						client_ID：发送者机器人对应的客户端ID（0x0101，红英雄客户端；0x0102，红工程客户端
+						                                       0x0103/4/5，红步兵；0x0106...
+																									 0x0111，蓝英雄客户端；0x0112/3/4/5/6...）	
+						data1/2/3：自定义浮点数据
+            indicator_light：bit 0-5 分别控制客户端显示面板上的6个指示灯（1，绿色；0，红色）						
+  * @note   
+  * @retval NULL.
+  */
+void judge_send_float(float data1,float data2,float data3,u8 light);  //源文件judgement_info.c

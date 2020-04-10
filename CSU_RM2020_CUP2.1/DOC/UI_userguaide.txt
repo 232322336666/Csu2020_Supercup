@@ -1,0 +1,44 @@
+简易式二段UI
+	使用相对容易，功能较简单，可满足大部分应用场合
+	但不便于自行扩展
+	
+	集成调参，参数保存的作用
+
+文件包含：
+	应用层：	UI_lib.c.h
+	驱动：
+		oled.c.h
+		key_board.c.h
+
+使用说明：
+
+1.主页面->参数修改页面
+             ->自定义操作页面(单次触发)
+             ->自定义操作界面(循环触发)
+
+1.创建页面
+	Page_TypeDef main_page; （主界面）
+	Page_TypeDef param_set_page;
+	Page_TypeDef param_set2_page;
+	Page_TypeDef data_Show_page;
+
+2.页面初始化
+	①.页面行数，类型初始化
+	②.页面系那是
+
+	PAGE_SET_MAIN
+	PAGE_PARAM
+
+3.显示页面
+	两种页面需要使用显示
+		a.参数修改页面
+		b.主页面
+
+	UI_show(&main_page);
+	UI_show(&main_page);
+
+任何一个页面都有对应的回调函数来
+对于主界面
+	该函数需要自己调用
+	而从界面的回调函数是当触发命令进入到该界面时被调用的，需在最初的设定中进行关联。
+
