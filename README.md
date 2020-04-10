@@ -1,1 +1,4 @@
 # Csu2020_Supercup
+本github库主要包含robomaster2020赛季超级电容研发成果
+其中包含:基于keil的软件信息，及基于AD的硬件信息。
+最终解释权属于中南大学FYT机器人战队
